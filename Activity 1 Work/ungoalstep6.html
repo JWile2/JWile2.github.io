@@ -53,6 +53,7 @@
     background-color: DodgerBlue;
     align-content: center;
     justify-content: center;
+    margin-top: 200px;
     }
 
    .flex-container > div {
@@ -69,16 +70,27 @@
       width: 100%;
     }
 
+    .topbar{
+
+      overflow-color: white;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
 
 	</style>
 </head>
 <body>
 
-<picture>
+<div class = "topbar">
+  <picture>
   <source media="(min-width: 940px)" srcset="images/logohorizontal.png">
   <img class = "center" src="images/logosquare.png" alt="Flowers" style="width:auto;">
-</picture>
-
+  </picture>
+</div>
 
 <div class = "flex-container">
 
