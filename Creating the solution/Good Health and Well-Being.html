@@ -5,7 +5,6 @@
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 	body {
 		  margin: 0;
@@ -60,7 +59,80 @@
 		.topnav > a {
 		font-family: 'ZCOOL XiaoWei', serif;	
 		}
+
+		p{
+		 color:white;
+		 font-size: 20px;
+
+		
+		}
+		header{
+			font-size: 22px;
+			color:white;
+		}
+
+		li{
+
+			color: white;
+			font-size: 20px;
+		}
+
+		.flip-box {
+		  background-color: transparent;
+		  width: 300px;
+		  height: 300px;
+		  perspective: 1000px;
+		}
+
+		.flip-box-inner {
+		  position: relative;
+		  width: 100%;
+		  height: 100%;
+		  text-align: center;
+		  transition: transform 0.8s;
+		  transform-style: preserve-3d;
+		}
+
+		.flip-box:hover .flip-box-inner {
+		  transform: rotateY(180deg);
+		}
+
+		.flip-box-front, .flip-box-back {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  backface-visibility: hidden;
+		}
+
+		.flip-box-front {
+		  background-color: #bbb;
+		  color: black;
+		}
+
+		.flip-box-back {
+		  background-color: dodgerblue;
+		  color: white;
+		  transform: rotateY(180deg);
+		}
+
+    .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+    align-content: center;
+    justify-content: center;
+    margin-top: 200px;
+    }
+
+   .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    }
 	</style>
+
+
 
 </head>
 <body>
@@ -83,15 +155,46 @@
 
 
 		<div class = "content">
+	<header>
+		<h1>Introduction</h1>
+	</header>
 
-		Introduction
+		<p>Good Health and Well-Being is to help you make sure that you and your body can live a healthy life. There are many different types of health that you have that you can improve like physical and mental. Without health we cannot do anything in this world. Health is more benficial than wealth in this world because without you are nothing. In my opinion a poor person with great health is happier than a rich person with bad health. health is esseintial to any occupation that you are a part of because without it you will suffer and you will end up being dead.</p>
 
-		
+	<header>
+			<h3>Facts and Figures</h3>
+		</header>
+
+			<p>
+			<ul>
+  <li>Optimism may help you live longer</li>
+  <li>Bananas can help improve your mood</li>
+  <li>Cold temperature can be good for your health</li>
+<li>If you are tired, exercise will help</li>
+<li>You can physically see high cholesterol</li>
+<li>More than half your bones are located in your hands and feet</li>
+<li>Your sweat is mostly made up of water</li>
+<li>Drink something hot to cool down</li>
+</ul> </p>
+
+<header>
+	<h4>Question to Think About</h4>
+
+
+<div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img src="images/E_SDG 03.png" alt="Avatar" style="width:300px; height:300px;">
+      </div>
+      <div class="flip-box-back" style="background-color: #279b48">
+        <h3>Good Health and Well-Being</h3>
+        <p>How did you feed your sole Today?</p>
+      </div>
+    </div>
+  </div>
 
 
 
-
-		</div>
 <script>
 //*********************header
 		// When the user scrolls the page, execute myFunction 
@@ -108,6 +211,30 @@
 		    header.classList.remove("sticky");
 		  }
 		}
+	
+
+<script>
+  //This script gets run once when the program starts. 
+  w = window.innerWidth   //Takes window object and stores width in w
+  //A conditional statement that checks w
+  if (w > 940) {
+    document.getElementsByClassName("flex-container")[0].style.marginTop = "200px";
+  }
+  else {
+    document.getElementsByClassName("flex-container")[0].style.marginTop = "280px";
+  }
+  window.onresize = function(event) {
+    w = window.innerWidth
+    if (w > 940) {
+      document.getElementsByClassName("flex-container")[0].style.marginTop = "200px";
+    }
+    else {
+      document.getElementsByClassName("flex-container")[0].style.marginTop = "280px";
+    }
+  }
+</script>
 	</script>
 </body>
 </html>
+
+
